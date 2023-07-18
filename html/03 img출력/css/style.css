@@ -1,0 +1,35 @@
+img.naver {
+  border: 1px solid red;
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  object-position: center;
+}
+a.facebook {
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-image: url(../img/facebook.jpg);
+}
+a.facebook:hover {
+  background-image: url(../img/facebook_over.png);
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+.box1 {
+  background-image: url(../img/bg2.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.box2 {
+  background-image: url(../img/bg2.jpg), url(../img/bg2.jpg);
+  background-repeat: repeat-y, repeat-x;
+  background-position: center 0, 0 center;
+}
+.box3 {
+  background-image: url(../img/spriteimg.jpg);
+  background-size: cover;
+}

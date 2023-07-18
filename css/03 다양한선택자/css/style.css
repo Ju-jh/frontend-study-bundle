@@ -1,0 +1,17 @@
+* {
+  font-size: 17px;
+  color: #000;
+}
+.ex3 :first-of-type {
+  color: red;
+}
+.ex4 b:nth-child(even):not(:last-child) {
+  color: red;
+}
+.ex5 a[href] {
+  font-style: italic;
+}
+.ex5 a[href='http://']
+{
+  font-style: oblique;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #666;
+      }
+      h1 {
+        color: red;
+      }
+      .feature {
+        color: blue;
+      }
+      .selector {
+        color: blueviolet;
+      }
+      #id {
+        color: pink;
+      }
+      .green {
+        color: green;
+      }
+      #pink {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><abbr>css</abbr>기초</h1>
+      <p>Cascading Style Sheet</p>
+      <hr />
+      <section>
+        <h2 class="feature">특징과 개념</h2>
+        <ul>
+          <li>html문서를 기반으로 한 디자인 언어</li>
+          <li>우선순위가 존재한다</li>
+          <li>상속(inheritance)개념이 존재한다</li>
+          <li>다양한 선택자(selector)가 존재한다</li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2 class="selector" id="id">선택자</h2>
+        <article>
+          <h3>태그선택자</h3>
+          <ul>
+            <li>
+              <h4>문법</h4>
+              <p>style엘리먼트 안쪽에서 tagname{속성:속성값}</p>
+            </li>
+            <li>우선순위 : 자식선택자, 부모선택자</li>
+            <li>모든 태그에 동일한 스타일이 적용된다</li>
+          </ul>
+        </article>
+        <article>
+          <h3>class selector</h3>
+          <ul>
+            <li>
+              문법 : style요소안에서 .클래스네임{속성:속성값} 선언 후 html요소의
+              class속성으로 호출
+            </li>
+            <li>반복해서 호출이 가능함(수정, 관리가 용이함)</li>
+            <li>우선순위 : 클래스, 태그선택자</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>아이디 선택자</h3>
+          <ul>
+            <li>
+              style요소내에서 #아이디{속성:속성값}선언 후, html id속성으로 호출
+            </li>
+            <li>id는 중복호출 될 수 없음</li>
+            <li>우선순위 : 아이디, 클래스</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 class="green" id="pink" style="color: aqua">inline style</h3>
+          <ul>
+            <li>문법 : html요소의 style속성을 추가 후 css문법을 작성</li>
+            <li>script로 스타일을 제어할떄 사용</li>
+            <li>선택자보다 우선순위가 높음</li>
+            <li></li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <h2>우선순위</h2>
+      <p>
+        0. !important <br />
+        1. inline style <br />
+        2. id selector <br />
+        3. class selector <br />
+        4. type selector <br />
+        5. children selector
+      </p>
+    </main>
+  </body>
+</html>

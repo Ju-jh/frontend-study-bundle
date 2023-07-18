@@ -1,0 +1,46 @@
+body {
+  background-color: green;
+}
+.section1 li:nth-child(1) {
+  color: red;
+}
+.section1 li:nth-child(2) {
+  font-size: 10px;
+}
+.section1 li:nth-child(3) {
+  font-family: "Courier New", Courier, monospace;
+}
+.section1 li:nth-child(4) {
+  letter-spacing: 20px;
+}
+.section1 li:nth-child(5) {
+  word-spacing: 20px;
+}
+.section1 li:nth-child(6) {
+  text-align: center;
+}
+.section1 li:nth-child(7) {
+  line-height: 50px;
+}
+.section1 li:nth-child(8) {
+  font-weight: bold;
+}
+.section1 li:nth-child(9) {
+  font-style: italic;
+}
+.section1 li:nth-child(10) {
+  text-decoration: line-through;
+}
+
+.section2 li:nth-child(2) {
+  font-size: 2em;
+}
+.section2 li:nth-child(2) span {
+  font-size: 2em;
+}
+.section2 li:nth-child(2) b {
+  font-size: 2rem;
+}
+.section2 li:nth-child(3) span {
+  font-size: 2rem;
+}
