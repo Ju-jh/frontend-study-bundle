@@ -1,0 +1,88 @@
+h1 {
+  /* width: 300px; */
+  background: #eee;
+}
+
+span {
+  background: red;
+}
+
+.ex1 span {
+  display: inline-block;
+  width: 100px;
+  background: yellow;
+  vertical-align: middle;
+  /* top, middle, bottom 이 있다. */
+  text-align: center;
+}
+
+.ex1 span:nth-child(1) {
+  height: 150px;
+  line-height: 150px;
+}
+.ex1 span:nth-child(2) {
+  height: 100px;
+  line-height: 100px;
+}
+.ex1 span:nth-child(3) {
+  height: 50px;
+  line-height: 50px;
+}
+
+.ex2 {
+  width: 200px;
+  height: 200px;
+  /* margin: 0 auto; */
+  margin: auto;
+  /* margin auto는 x축을 좌우로 밀어 */
+  /* margin-left: auto; 오른쪽으로 최대한 밀어*/
+  /* margin-right: auto; 왼쪽으로 최대한 밀어*/
+  background: yellow;
+  text-align: right;
+}
+
+.ex1 {
+  text-align: center;
+}
+
+.ex2 span {
+  display: inline-block;
+  /* inline block에서는 auto 사용할 수 없다. */
+  width: 100px;
+  height: 100px;
+  background: green;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* .test {
+  text-align: center;
+} */
+
+.box1 {
+  background: green;
+  width: 350px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.box1 span {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  line-height: 100px;
+}
+
+.box1 span:first-child {
+  display: block;
+  margin: 0 auto;
+}
+
+.box1 span:first-child ~ * {
+  display: inline-block;
+}
+
+.pr p {
+  text-align: center;
+}

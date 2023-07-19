@@ -1,0 +1,98 @@
+.ex1 {
+  width: 500px;
+  background: #eee;
+  margin: 0 auto;
+  padding: 100px;
+  box-sizing: border-box;
+  /* 지정한 사이즈만큼 여백을 발라주게 해준다. */
+}
+
+.ex1 div {
+  width: 100px;
+  height: 100px;
+  background: black;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.ex1 div:nth-child(2) {
+  margin: 0 auto;
+}
+
+.ex1 div:nth-child(3) {
+  margin: 0 200px;
+  /* margin-left: 0 auto; 라고 해도 된다.
+  margin: 0 0 0 auto 와도 같다. */
+}
+
+.ex2 {
+  width: 500px;
+  background: #eee;
+  margin: 0 auto;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.ex2 > div {
+  /* width: 300px */
+  /* height도 안쓴다. */
+  background: black;
+}
+
+.ex2 > div > div {
+  background: red;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.ex2 > div > div:nth-child(2) {
+  /* .ex2 > div > div:last-child 라고 해도 상관없음. */
+  margin: 100px 0 0 auto;
+}
+
+.ex3 span {
+  display: inline-block;
+  border: 1px solid red;
+  background: yellow;
+  margin: 30px 0;
+  padding: 10px 30px;
+}
+
+.ex4 div {
+  margin: 30px 0;
+}
+
+.ex5 {
+  width: 670px;
+  margin: 0 auto 0 auto; /*  == margin: 0 auto */
+  background: black;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.ex5 > div {
+  /* > 를 사용하는건 직계 자식만 적용된다는 뜻 */
+  width: 290px;
+  background: red;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.ex5 > div:last-child {
+  margin: 30px 0 0 auto;
+}
+
+.ex5 > div > div {
+  width: 100px;
+  height: 100px;
+  background: green;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.ex5 > div > div:nth-child(2) {
+  margin: 30px 0 0 auto;
+}

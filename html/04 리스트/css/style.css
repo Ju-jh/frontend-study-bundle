@@ -1,0 +1,15 @@
+ul li {
+  list-style: none;
+}
+
+ul li::before {
+  content: '* ';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #000;
+}
+
+ul li::after {
+  content: '* ';
+}

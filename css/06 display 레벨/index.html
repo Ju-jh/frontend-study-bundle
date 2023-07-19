@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1><b>display</b> <b>level</b></h1>
+      <section>
+        <h2>display의 종류</h2>
+        <article>
+          <h3>block 레벨</h3>
+          <ul>
+            <li>한줄을 통째로 차지하는 요소</li>
+            <li>기본적으로 부모의 넓이와 동일한 넓이를 갖게 된다</li>
+            <li>크기를 가질 수 있다</li>
+          </ul>
+        </article>
+        <article>
+          <h3>inline 레벨</h3>
+          <ul>
+            <li>줄내림이 되지 않는 요소</li>
+            <li>크기속성을 가질 수 없음</li>
+            <li>a, small, em, i, ...</li>
+          </ul>
+          <span>span</span>
+        </article>
+        <article>
+          <h3>inline-block 레벨</h3>
+          <ul>
+            <li>줄내림이 되지 않으면서, 크기를 가질 수 있음</li>
+            <li>
+              img, svg, canvas, video, iframe, button, input, select, textarea
+            </li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <h2>inline 레벨간의 수평 줄맞춤</h2>
+        <!-- inline블럭 한개가 나오면 글자로 보아라! -->
+        <!-- 한줄일때만 line-height 쓰는거고 -->
+        <!-- 두줄 이상이면 flex 쓰는거다. -->
+        <div class="ex1">
+          <span>span</span>
+          <span>span</span>
+          <span>span</span>
+        </div>
+        <ul>
+          <li>text-align은 요소 안쪽 글자및 인라인 계열 요소를 정렬</li>
+          <li>
+            line-height은 행간을 제어하는 속성이지만, 요소의 높이와 동일하게
+            설정할 경우 수직 중앙정렬 기능으로 사용됨. (단 한줄까지만 사용
+            가능!!!!!, 두줄 이상부터는 flex 같은걸 사용.)
+          </li>
+          <li>vertical-align속성은 글자 및 인라인 계열 요소의 수평줄맞춤</li>
+        </ul>
+      </section>
+      <section>
+        <h2>block레벨의 수평정렬</h2>
+        <ul>
+          <li>
+            margin의 수평값에 auto값을 사용 (auto값은 block레벨에만 적용됨.)
+          </li>
+        </ul>
+        <div class="ex2">
+          <span>span</span>
+        </div>
+      </section>
+      <section class="pr">
+        <h2>problem</h2>
+        <p>div</p>
+        <div class="box1">
+          <span>span</span><span>span</span><span>span</span>
+        </div>
+      </section>
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+    </main>
+  </body>
+</html>

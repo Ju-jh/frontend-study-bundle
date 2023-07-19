@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>margin과 padding</h1>
+    <ul>
+      <li>
+        첫번째, 마지막 블럭레벨요소는 상하마진이 적용되지 않는다 (예외 :
+        부모객체의 padding-top, border-top이 적용되지 않았을경우)
+      </li>
+      <li>
+        padding과 border는 기본적으로 크기에 추가됨. <br />
+        box-sizing:border-box를 이용해서 크기 안쪽에 포함시킬 수 있음.
+      </li>
+      <li>inline 레벨은 상하마진이나 상하패딩이 적용되지 않는다.</li>
+      <li>block레벨간에 상하마진은 하나의 큰 값만 적용된다.</li>
+    </ul>
+    <hr />
+    <p>1번 와이어프레임</p>
+    <div class="ex1">
+      <div>div1</div>
+      <div>div2</div>
+      <div>div3</div>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <hr />
+    <p>2번 와이어프레임</p>
+    <div class="ex2">
+      <div>
+        <div>div1</div>
+        <div>div2</div>
+      </div>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <hr />
+    <p>3번 와이어프레임</p>
+    <div class="ex3">
+      <span>span</span>
+      <br />
+      <span>span</span>
+    </div>
+    <hr />
+    <div class="ex4">
+      <div>div</div>
+      <div>div</div>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <hr />
+    <p>4번 와이어프레임</p>
+    <div class="ex5">
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+  </body>
+</html>
