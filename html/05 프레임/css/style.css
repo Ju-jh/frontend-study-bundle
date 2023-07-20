@@ -1,0 +1,12 @@
+.gmap {
+  width: 50%;
+  height: 300px;
+  box-sizing: border-box;
+  border: 10px solid black;
+}
+
+.youtube {
+  /* 560 * 315 */
+  width: 800px;
+  height: 450px;
+}

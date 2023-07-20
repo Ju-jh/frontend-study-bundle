@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>float</h1>
+      <ul>
+        <li>
+          float이 적용된 객체의 부모는 높이가 사라진다 <br />
+          clearfix를 이용해서 부모의 높이 문제를 해결해야함
+        </li>
+        <li>
+          float이 적용된 객체는 display속성이 적용되지 않는다. <br />
+          (block 레벨의 넓이가 없어짐, inline레벨도 크기를 가질 수 있다.
+          margin의 auto값이 적용되지 않는다.)
+        </li>
+        <li>
+          float이 적용되지 않은 용소는, float요소와 margin이 적용되지 않는다.
+        </li>
+      </ul>
+    </main>
+    <hr />
+    <div class="ex1">
+      <span>최근 올라온 뉴스</span>
+      <span>2023.08.02</span>
+    </div>
+    <hr />
+    <div class="ex2">
+      <p>최근 올라온 뉴스</p>
+      <p>2023.08.02</p>
+    </div>
+    <hr />
+    <div class="container1">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+      <div class="box box6">6</div>
+      <div class="box box7">7</div>
+      <div class="widebox box8">8</div>
+      <div class="widebox box9">9</div>
+    </div>
+    <!-- ex1 -->
+    <hr />
+    <div class="container2">
+      <div class="longbox box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="longbox box5">5</div>
+      <div class="box box6">6</div>
+      <div class="box box7">7</div>
+      <div class="box box8">8</div>
+    </div>
+    <hr />
+    <div class="container3">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+      <div class="box box6">6</div>
+      <div class="box box7">7</div>
+      <div class="box box8">8</div>
+      <div class="box box9">9</div>
+      <div class="box box10">10</div>
+      <div class="box box11">11</div>
+      <div class="box box12">12</div>
+    </div>
+  </body>
+</html>

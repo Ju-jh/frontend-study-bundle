@@ -1,0 +1,151 @@
+.container1 {
+  margin: 30px auto;
+  width: 980px;
+  border: 1px solid black;
+  background: #eee;
+  padding-top: 20px;
+}
+
+.ex1 {
+  background: yellow;
+}
+
+.ex1 span:last-child {
+  float: right;
+}
+
+.ex2 {
+  border: 1px solid red;
+}
+
+.ex2::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.ex2 p {
+  background: yellow;
+}
+
+.ex2 p:first-child {
+  float: left;
+}
+.ex2 p:last-child {
+  float: right;
+}
+
+.container1::after {
+  /*clearfix 라고 부름*/
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container1 div {
+  height: 300px;
+  background: purple;
+  margin-bottom: 20px;
+}
+
+.container1 .box {
+  width: 300px;
+}
+
+.container1 .widebox {
+  width: 460px;
+}
+
+.container1 .box1,
+.container1 .box2,
+.container1 .box3,
+.container1 .box4,
+.container1 .box5,
+.container1 .box6,
+.container1 .box8,
+.container1 .box9 {
+  float: left;
+  margin-left: 20px;
+}
+
+.container1 .box3 {
+  clear: both;
+}
+
+.container1 .box7 {
+  float: right;
+  margin-right: 20px;
+}
+
+.container2 {
+  width: 980px;
+  margin: 30px auto;
+  border: 1px solid black;
+  padding-top: 20px;
+}
+
+.container2::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container2 div {
+  margin-bottom: 20px;
+  width: 300px;
+  background: pink;
+}
+
+.container2 .box {
+  height: 300px;
+}
+
+.container2 .longbox {
+  height: 620px;
+}
+
+.container2 div:not(.box4 ~ div) {
+  float: left;
+  margin-left: 20px;
+}
+
+.container2 .box4 ~ div {
+  float: right;
+  margin-right: 20px;
+}
+
+.container2 .box5 {
+  clear: both;
+}
+
+.container3 {
+  width: 980px;
+  margin: 20px auto;
+  border: 1px solid black;
+  padding-top: 20px;
+}
+
+.container3::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container3 div {
+  width: 300px;
+  float: left;
+  background: green;
+  margin: 0 0 20px 20px;
+}
+
+.container3 div:nth-child(odd) {
+  height: 150px;
+}
+
+.container3 div:nth-child(even) {
+  height: 300px;
+}
+
+.container3 div:nth-child(3n + 1) {
+  clear: both;
+}
