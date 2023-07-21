@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="ex1">
+      <p>1. 가위바위보중 하나를 선택하고 결과를 확인하세요.</p>
+      <p>
+        <label for="가위"
+          ><input value="가위" type="radio" name="a" id="가위" />가위</label
+        >
+        <label for="바위"
+          ><input value="바위" type="radio" name="a" id="바위" />바위</label
+        >
+        <label for="보">
+          <input value="보" type="radio" name="a" id="보" />보</label
+        >
+      </p>
+      <p>
+        <button>결과보기</button>
+      </p>
+      <p class="result">결과</p>
+    </form>
+    <hr />
+    <form class="ex2">
+      <p>2. 모든문제 정답이면 최종정답</p>
+      <p class="q1">
+        <input class="num1" type="number" min="0" max="9" readonly value="" />
+        +
+        <input class="num2" type="number" min="0" max="9" readonly value="" />
+        =
+        <input class="usernum" type="number" min="0" max="19" />
+      </p>
+      <p class="q2">
+        <input class="num1" type="number" min="0" max="9" readonly value="" />
+        +
+        <input class="num2" type="number" min="0" max="9" readonly value="" />
+        =
+        <input class="usernum" type="number" min="0" max="19" />
+      </p>
+      <p class="q3">
+        <input class="num1" type="number" min="0" max="9" readonly value="" />
+        +
+        <input class="num2" type="number" min="0" max="9" readonly value="" />
+        =
+        <input class="usernum" type="number" min="0" max="19" />
+      </p>
+      <p><button>결과확인</button></p>
+      <p class="result">결과</p>
+    </form>
+    <hr />
+    <form class="ex3">
+      <input class="num1" type="number" min="0" max="9" />
+      <select>
+        <option value="더하기">더하기</option>
+        <option value="빼기">빼기</option>
+        <option value="곱하기">곱하기</option>
+      </select>
+      <input class="num2" type="number" min="0" max="9" />
+      =
+      <button>결과보기</button>
+      <p class="result">결과</p>
+    </form>
+  </body>
+</html>

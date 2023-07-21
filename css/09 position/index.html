@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        position
+        <span class="circle1">1</span>
+        <span class="circle2">2</span>
+        <span class="circle3">3</span>
+        <span class="circle4">4</span>
+      </h1>
+      <p>좌표를 이용해서 원하는 특정 위치로 요소를 배치</p>
+      <hr />
+      <section>
+        <h2>absolute</h2>
+        <ul>
+          <li>
+            abs 포지션이 적용되면 독립적인 위치를 가진다 <br />
+            다른요소와 겹치고, 부모는 높이를 인식할 수 없다.
+          </li>
+          <li>좌표를 설정할 수 있음 : left, right, top, bottom</li>
+          <li>
+            absolute의 좌표 기준점은 <em>position을 가지고있는</em>부모기준이다
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>fixed과 absolute의 차이</h2>
+        <ul>
+          <li>absolute는 문서기준, fixed는 브라우저 기준 좌표</li>
+          <li>
+            fixed의 좌표는 부모와 상관없음. (!단 부모요소에 transform속성이
+            적용되면 예외)
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>relative</h2>
+        <ul>
+          <li>absolute가 적용된 지식요소의 기준으로 설정할때 사용</li>
+          <li>
+            현재 레이아웃을 그대로 유지하면서 position속성을 적용할 수 있음
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+          aspernatur quis obcaecati laudantium debitis voluptates adipisci
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+          aspernatur quis obcaecati laudantium debitis voluptates adipisci
+          numquam ipsam, minima aperiam tempore minus. Laborum adipisci modi
+          incidunt sapiente ducimus dolor cupiditate.
+        </p>
+      </div>
+      아주 중요한 내용... <br />
+      아주 중요한 내용... <br />
+      아주 중요한 내용... <br />
+    </main>
+
+    <!-- <span class="box1"><span>box1</span></span> -->
+    <div class="box2"></div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

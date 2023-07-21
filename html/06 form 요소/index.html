@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/scriopt.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>form요소</h1>
+      <p>웹브라우저를 이용해 사용자가 제아할 수 있는 ui</p>
+      <section>
+        <h2>form요소의 개념</h2>
+        <ul>
+          <li>전송할 데이터의 범위</li>
+          <li>action속성 : 데이터를 전송할 주소</li>
+          <li>
+            method속성
+            <ul>
+              <li>get : 주소창을 이용해 텍스트로 테이터를 전송</li>
+              <li>post : 보안이 필요한 데이터, 바이너리파일을 전송</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <hr />
+      <section>
+        <h2>form의 구획요소</h2>
+        <ul>
+          <li>fieldset : 관련된 데이터의 범위를 설정</li>
+          <li>legend : fieldset의 제목</li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>form의 접근성</h2>
+        <ul>
+          <li>label요소 : for와 id속성으로 연결</li>
+          <li>title속성 : label 텍스트를 대체할 수 있는 속성</li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>input 요소와 type</h2>
+        <ul>
+          <li>text : default속성</li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>입력양식의 종류</h2>
+        <ul>
+          <li>input</li>
+          <li>select,option</li>
+          <li>textarea</li>
+          <li>button</li>
+        </ul>
+      </section>
+    </main>
+    <hr />
+    <form>
+      <fieldset>
+        <legend>회원가입</legend>
+        <fieldset>
+          <legend>필수입력사항</legend>
+          <p>
+            <label for="userid">아이디</label>
+            <input id="userid" type="text" />
+          </p>
+          <p>
+            <label for="userpw">비밀번호</label>
+            <input
+              id="userpw"
+              type="password"
+              maxlength="10"
+              placeholder="영문과숫자를혼용.."
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>선택입력사항</legend>
+          <p>
+            <label for="email">이메일</label>
+            <input id="email" type="email" />
+          </p>
+          <p>
+            <label>전화번호</label>
+            <label for="tel1" title="첫번째 전화번호 세자리 수"></label>
+            <input id="tel1" type="tel" /> -
+            <label for="tel2" title="첫번째 전화번호 세자리 수"></label>
+            <input id="tel2" type="tel" /> -
+            <label for="tel3" title="첫번째 전화번호 세자리 수"></label>
+            <input id="tel3" type="tel" />
+          </p>
+          <p>
+            <label for="range">주민등록번호앞자리</label>
+            <input
+              id="range"
+              type="range"
+              value="10"
+              min="10"
+              max="99"
+              step="2"
+            />
+            <span class="range">10</span>
+          </p>
+          <p>
+            <label for="date">생년월일</label>
+            <input
+              id="date"
+              type="date"
+              value="2023=07-21"
+              min="2020-01-01"
+              max="2023-12-31"
+            />
+          </p>
+        </fieldset>
+      </fieldset>
+    </form>
+  </body>
+</html>

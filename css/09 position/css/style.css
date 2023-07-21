@@ -1,0 +1,101 @@
+h1 {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 200px;
+  background-color: orange;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: -0.2em;
+  border-radius: 50%;
+  position: relative;
+}
+
+h1 span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  font-size: 1rem;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+h1 .circle1 {
+  left: 80px;
+  top: -20px;
+}
+h1 .circle2 {
+  left: -20px;
+  top: 80px;
+}
+h1 .circle3 {
+  left: 80px;
+  top: 180px;
+}
+h1 .circle4 {
+  left: 180px;
+  top: 80px;
+}
+
+.box1 {
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+
+  /* 옛날 방법 */
+  /* left: 50%;
+  margin-left: -50px;  */
+
+  left: calc(50% - 50px);
+
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+
+.box1 span {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: purple;
+  color: white;
+}
+
+.box2 {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  left: calc(100% - 100px);
+  top: calc(50% - 100px);
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.container p {
+  background-color: yellow;
+  padding: 20px;
+  position: relative;
+  /* 원래 그상태 그대로 유지 (absolute를 적용했을 때 p태그에도 absolute를 줘버리면 폭파되니 그대로 사용하고 싶을 때 쓴다.)
+     부모기준이 아니라 자식 (absolute를 사용한)을 기준으로 사용할 수 있게끔 해준다. */
+}
+
+.container p::before {
+  content: ' new ';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
