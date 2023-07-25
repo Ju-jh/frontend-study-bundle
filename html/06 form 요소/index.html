@@ -94,6 +94,12 @@
           </p>
           <p>
             <label>전화번호</label>
+            <select name="" id="">
+              <option value="">통신사</option>
+              <option value="">lgu</option>
+              <option value="">ktf</option>
+              <option value="">skt</option>
+            </select>
             <label for="tel1" title="첫번째 전화번호 세자리 수"></label>
             <input id="tel1" type="tel" /> -
             <label for="tel2" title="첫번째 전화번호 세자리 수"></label>
@@ -122,6 +128,52 @@
               min="2020-01-01"
               max="2023-12-31"
             />
+          </p>
+          <p>
+            <label for="">파일업로드</label>
+            <input
+              id="file"
+              type="file"
+              multiple
+              accept=".jpg, .png, .txt ,image/* ,video/*"
+            />
+          </p>
+          <p>
+            <label for="radio">성별</label>
+            <label for="radio1" title="남성"
+              ><input id="radio" type="radio" name="gender" /> 남
+            </label>
+            <label for="radio2" title="남성"
+              ><input id="radio" type="radio" name="gender" /> 여
+            </label>
+          </p>
+          <p>
+            <label>취미</label>
+            <label for="check1">
+              <input type="checkbox" name="check" id="check1" /> 영화
+            </label>
+            <label for="check2">
+              <input type="checkbox" name="check" id="check2" /> 음악
+            </label>
+            <label for="check3">
+              <input type="checkbox" name="check" id="check3" /> 독서
+            </label>
+
+            <!-- name 프로퍼티를 할당하는 이유는 required를 사용했을때 하나만 체크하지 않아도
+            요구사항에 맞지 않기때문에 거를 수 있다. -->
+            <input type="checkbox" id="""> 영화 <input type="checkbox" id=""">
+            음악
+          </p>
+          <p>
+            <label for="">하고싶은말</label>
+            <textarea name="" id="" cols="50" rows="5"></textarea>
+          </p>
+          <p>
+            <button type="submit">전송버튼</button>
+            <!-- form 안에서 전송버튼을 만드면 default로 submit type으로 만든것. -->
+            <button type="reset">초기화버튼</button>
+            <!-- 진짜 Reset버튼임 쓰는일이 많지는 않음.-->
+            <button type="button">모양만버튼</button>
           </p>
         </fieldset>
       </fieldset>

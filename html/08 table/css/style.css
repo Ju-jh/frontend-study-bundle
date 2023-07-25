@@ -1,0 +1,60 @@
+table {
+  border-collapse: collapse; /* => td간의 여백 없애기 */
+  /* collapse => 아무데서나 쓰는게 아니라 table에서만 쓸 수 있다. */
+  /* margin: 30px auto; */
+  table-layout: fixed; /* table과 td의 크기를 고정 */
+  margin: 30px auto;
+}
+
+table.ex1 {
+  /* td에 크기로는 table의 크기를 제어할 수 없다. */
+  width: 150px;
+}
+
+table.ex1 td {
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid red;
+  text-align: center;
+}
+
+table.ex2 {
+  width: 400px;
+}
+
+table caption {
+  padding-bottom: 20px;
+}
+
+table.ex3 caption {
+  color: red;
+}
+
+table.ex2 td,
+table.ex2 th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+table.ex3 {
+  width: 400px;
+}
+
+table.ex3 td,
+table.ex3 th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+table.ex4 {
+  width: 400px;
+}
+
+table.ex4 td,
+table.ex4 th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
