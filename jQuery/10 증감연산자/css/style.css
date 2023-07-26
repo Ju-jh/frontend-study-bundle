@@ -1,0 +1,55 @@
+.carousel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel img {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.carousel .img1 {
+  display: block;
+}
+
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  top: 135px;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.carousel .btns {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel .btns button {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.carousel .btns button.active {
+  opacity: 1;
+}

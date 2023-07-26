@@ -1,0 +1,31 @@
+.calc {
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.calc .output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.calc .btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calc .btns button {
+  width: 25%;
+  margin-left: -1px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  height: 50px;
+}

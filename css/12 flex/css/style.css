@@ -1,0 +1,173 @@
+.ex1,
+.ex2 {
+  width: 500px;
+  padding: 10px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+.ex1 div,
+.ex2 span {
+  background-color: yellow;
+  border: 1px solid green;
+}
+
+.ex1 {
+  display: flex;
+  /* flex-direction: row; 라는 말이 생략된 것. */
+  /* 순서를 반대로 바꾸고 싶다면 row-reverse를 사용하면 된다. */
+}
+
+.ex2 {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+  /* 순서를 반대로 바꿔준다. */
+}
+
+.ex3,
+.ex4 {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid brown;
+}
+
+.ex3 div,
+.ex4 span {
+  background: yellow;
+  border: 1px solid orange;
+}
+
+.ex3 {
+  display: flex;
+  /* flex-direction: row; 생략된것*/
+  align-items: center;
+  /* flex-start, flex-end, center 가 있다. */
+}
+
+.ex4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ex5,
+.ex6,
+.ex7,
+.ex8,
+.ex9 {
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid brown;
+}
+
+.ex5 div,
+.ex6 div,
+.ex7 div,
+.ex8 div,
+.ex9 div {
+  background: yellow;
+  border: 1px solid orange;
+}
+
+.ex5 {
+  display: flex; /* 오뎅 접시레이아웃 */
+  flex-direction: row; /* 꼬치를 수평으로 해주세요 */
+  align-items: center; /* 꼬치를 수직 중앙으로 옯긴다 */
+  justify-content: space-between; /* 오뎅을 벌려 주세요 */
+}
+
+.ex6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.ex7 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.ex8 {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.ex9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ex10 {
+  margin: 0 auto;
+  width: 200px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex wrap을 준다. */
+}
+
+.ex10 div {
+  width: 90px;
+  height: 90px;
+  background-color: yellow;
+  margin: 5px;
+}
+
+.ex11,
+.ex12 {
+  display: flex;
+  width: 400px;
+  margin: 30px 0;
+  border: 5px solid black;
+}
+
+.ex11 div {
+  background-color: yellow;
+  border: 1px solid black;
+  flex-grow: 1;
+  /* default = 1
+  0 혹은 1 (width를 지정하면 안된다) 
+  =>> 넓이를 자동 분배한다.*/
+}
+
+.ex12 {
+  overflow: auto;
+}
+
+.ex12 div {
+  width: 150px;
+  border: 1px solid red;
+  flex-shrink: 0;
+  /* default = 0
+  0 혹은 1 (width을 지정할 수 있다) 
+  ==>> 넓이를 부모와 관계없이 지정 분배할 수 있다.*/
+  /* overflow: auto; 를 사용할 때 사용한다. */
+}
+
+.ex13 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.ex13 div {
+  border: 1px solid black;
+  background-color: yellow;
+  width: 40px;
+  flex-grow: 1;
+  text-align: center;
+}

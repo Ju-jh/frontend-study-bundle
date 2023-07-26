@@ -58,3 +58,27 @@ table.ex4 th {
   padding: 10px;
   text-align: center;
 }
+
+table.ex5 {
+  width: 600px;
+  margin: 0 auto;
+}
+
+table.ex5 caption {
+  margin-top: 20px;
+}
+
+.ex5 td,
+.ex5 th {
+  border: 1px solid black;
+  height: 30px;
+  text-align: center;
+}
+
+.ex5 thead {
+  background-color: lightgray;
+}
+
+.ex5 tbody th {
+  background-color: lightgreen;
+}

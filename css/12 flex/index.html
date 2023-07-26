@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- display 기본속성
+          auto, textalign, vertical align, line-height
+          flex
+          float
+          position, grid-->
+    <main>
+      <h1>flex</h1>
+      <ul>
+        <li>flex요소는 block요소와 유사하다</li>
+        <li>flex의 자식요소는 기존의 display속성을 상실한다</li>
+      </ul>
+      <hr />
+      <section>
+        <h2>flex direction</h2>
+        <ul>
+          <li>컨테이너 안의 그리드의 배치 방향</li>
+          <li>row, row-reverse, column, column-reverse</li>
+          <li>기본값은 row (flex-direction : row)</li>
+        </ul>
+        <div class="ex1">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div class="ex2">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <h2>align-items</h2>
+        <ul>
+          <li>축의 위치</li>
+          <li>
+            기본값 stretch <br />
+            flex-direction이 row일 경우 : 부모의 높이와 같아진다 <br />
+            flex-direction이 column일 경우 : 부모의 넓이와 같아진다
+          </li>
+          <li>
+            flex-direction이 row일 경우
+            <ul>
+              <li>flex-start : 상단축</li>
+              <li>flex-end : 하단축</li>
+              <li>center : 수직 중앙축</li>
+            </ul>
+          </li>
+          <li>
+            flex-direction이 column일 경우
+            <ul>
+              <li>flex-start : 왼쪽축</li>
+              <li>flex-end : 오른쪽축</li>
+              <li>center : 수평중앙축</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="ex3">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div class="ex4">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <h2>justify-content</h2>
+        <ul>
+          <li>축의방향으로 grid의 위치를 결정</li>
+          <li>
+            flex-direction이 row일 경우
+            <ul>
+              <li>flex-start : 왼쪽</li>
+              <li>flex-end : 오른쪽</li>
+              <li>center : 중앙</li>
+              <li>space-btween : 위아래로 분할</li>
+            </ul>
+          </li>
+          <li>
+            flex-direction이 column일 경우
+            <ul>
+              <li>flex-start : 상단</li>
+              <li>flex-end : 하단</li>
+              <li>center : 중앙</li>
+              <li>space-btween : 상하로 분할</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="ex5">
+          <div>div1</div>
+          <div>div2</div>
+          <div>div3</div>
+        </div>
+        <div class="ex6">
+          <div>div1</div>
+          <div>div2</div>
+          <div>div3</div>
+        </div>
+      </section>
+      <div class="ex7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="ex8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="ex9">
+        가나다라 <br />
+        마바사 <br />
+        아자 <br />
+      </div>
+      <hr />
+      <section>
+        <h2>flex-wrap</h2>
+        <p>축을 여러개 가질 수 있다</p>
+        <div class="ex10">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <h2>flex속성</h2>
+        <ul>
+          <li>flex-grow : 1 (부모의 남는 크기를 가진다)</li>
+          <li>flex-shrink : 0 (설정된 크기를 유지한다)</li>
+          <li>flex : 1 (flex : 1 1 0px) (flex : grow shrink basis)</li>
+        </ul>
+        <div class="ex11">
+          <div>box1</div>
+          <div>box2</div>
+          <div>box3</div>
+        </div>
+        <div class="ex12">
+          <div>box1</div>
+          <div>box2</div>
+          <div>box3</div>
+          <div>box4</div>
+          <div>box5</div>
+        </div>
+      </section>
+      <hr />
+      <div class="ex13">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </main>
+  </body>
+</html>
