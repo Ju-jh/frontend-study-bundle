@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/script.css" />
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
+    <script src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>문법</h1>
+      <section>
+        <h2>필수문법 (무조건 알아야함)</h2>
+        <ul>
+          <li>
+            h1~h6,p 요소는 블럭요소를 자식으로 허락하지 않는다.
+            <!-- <h1><div></div></h1> -->
+            <!-- <h1><p></p></h1>  -->
+          </li>
+          <li>
+            인라인, 인라인블록요소의 자식으로 블록요소는 허락되지 않는다. <br />
+            단 anchor요소는 블록요소를 자식으로 허락함.
+            <!-- <span><p></p></span> -->
+          </li>
+          <li>
+            상호작용 요소간에는 부모자식노드가 허락되지 않는다. <br />
+            <!-- <a href=""><button></button></a> -->
+            <!-- <a href=""><input type="text"></a> -->
+          </li>
+          <li>
+            ul, ol의 자식으로는 li만 허락됨
+            <!-- <ul><div></div></ul> -->
+            <!-- <ol><div></div></ol> -->
+          </li>
+          <li>
+            dl의 자식으로는 dt와 dd만 허락됨
+            <!-- <dl><div></div></dl> -->
+            <!-- <dt><div></div></dt> -->
+          </li>
+          <li>table은 tbody 한개 이상을 포함해야함.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>권장사항</h2>
+        <li>웹문서는 h1과 main요소를 한개를 포함하길 권장</li>
+        <li>h1~h6는 글자를 반드시 포함하길 권장</li>
+        <li>main, section, article요소는 제목요소 한개 이상을 포함하길 권장</li>
+        <li>입력양식은 레이블요소 한개와 참조하길 권장</li>
+      </section>
+    </main>
+  </body>
+</html>

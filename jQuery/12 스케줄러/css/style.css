@@ -1,0 +1,75 @@
+.ex2 .result {
+  display: none;
+}
+
+.ex4 .box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: all 1s;
+  display: none;
+}
+
+.ex8 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+.ex8 img {
+  width: 200px;
+}
+
+.carousel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+}
+
+.carousel img {
+  position: absolute;
+  display: none;
+}
+
+.carousel .img1 {
+  display: block;
+}
+
+.carousel .indicator {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 125px;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+.carousel .next {
+  right: 10px;
+}
+
+.btns {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 20px;
+}
+
+.btns button {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  background-color: white;
+  border: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btns button.active {
+  opacity: 1;
+}
