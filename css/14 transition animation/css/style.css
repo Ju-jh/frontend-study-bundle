@@ -1,0 +1,156 @@
+.ex1 div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+.ex1 .box1 {
+  /* transition: background 1s, color 1s; */
+  transition: all 1s;
+}
+
+.ex1 .box1:hover {
+  background-color: red;
+  /* transition: background 1s; */
+  /* 여기다가 적용하면 안된다 unactive 될 때 적용이 안되니까 */
+  color: yellow;
+}
+
+.ex1 .box2 {
+  transition: all 1s;
+}
+
+.ex1 .box2.active {
+  border-radius: 50%;
+  /* transition: all 1s; */
+  /* 여기다가 적용하면 안된다 unactive 될 때 적용이 안되니까 */
+}
+
+.ex1 .box3 {
+  position: relative;
+}
+
+.ex1 .box3 div {
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  transition: all 1s;
+}
+
+.ex1 .box3:hover div {
+  left: 0;
+  top: 80px;
+  /* 같은 트랜지션에만 적용이 된다.
+  예를들어 left 좌표를 transition 주고싶으면
+  변화가 일어날 상대도 left 좌표여야지 right를 주면
+  적용이 되질 않는다. */
+}
+
+.ex1 .box4 {
+  position: relative;
+}
+
+.ex1 .box4 div {
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  transition: left 1s, top 1s;
+  transition-delay: 1s, 0s;
+  transition-timing-function: linear;
+}
+
+.ex1 .box4:hover div {
+  left: 0;
+  top: 80px;
+  transition-delay: 0s, 1s;
+
+  /* 같은 트랜지션에만 적용이 된다.
+  예를들어 left 좌표를 transition 주고싶으면
+  변화가 일어날 상대도 left 좌표여야지 right를 주면
+  적용이 되질 않는다. */
+}
+
+.ex2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+}
+
+.ex2 div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  /* 
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse; 
+  
+  아래처럼 적용해도 괜찮다.*/
+  /* animation: move 3s infinite linear alternate-reverse; */
+}
+
+.ex2:hover div {
+  animation: move 3s infinite linear alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 250px;
+    top: 0;
+  }
+  50% {
+    left: 250px;
+    top: 250px;
+  }
+  75% {
+    left: 0;
+    top: 250px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+.ex3 {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  background-color: red;
+}
+
+.ex3:hover {
+  animation: jello 0.5s 2;
+}
+
+.ex4 {
+  height: 100px;
+  background-image: url(../../../../배경화면/newjeans-hanni-in-omg-album-shoot-wallpaper-1920x1280_38.jpg);
+  animation: bg 10s infinite linear;
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}

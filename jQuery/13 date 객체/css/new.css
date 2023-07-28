@@ -1,0 +1,45 @@
+.ex7{
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.ex7 img{
+    display: block;
+    width: 100%;
+}
+
+.ex7 .pin{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: center bottom;
+}
+
+.ex7 .sec{
+    height: 40%;
+    margin-left:-1px ;
+    width: 2px;
+    background: red;
+}
+
+.ex7 .min{
+    height: 30%;
+    margin-left:-2px ;
+    width: 4px;
+    background: black;
+}
+
+.ex7 .hour{
+    height: 20%;
+    margin-left:-3px ;
+    width: 6px;
+    background: blue;
+}
+
+.ex7 p{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
