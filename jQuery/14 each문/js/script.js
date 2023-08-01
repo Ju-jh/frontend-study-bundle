@@ -127,6 +127,8 @@ $(function () {
   });
 }); //ready
 
+/* -------------------------8번 */
+
 /* var n = $(this).val();
       console.log(n);
       if ($(`.ex8 .q${n} input:checked`).val() === '정답') {
@@ -140,21 +142,141 @@ $(function () {
 
 $(function () {
   $('.ex8 button').click(function () {
+    var point = 0;
     $('.ex8 .q').css({ background: 'none' });
 
-    var point = 0;
-
     $('.ex8 .q').each(function () {
-      var user = $(`.ex8 input:checked`).val();
+      var user = $(this).children('input:checked').val();
       if (user === '정답') {
-        console.log(user);
-
+        point += 1;
+        $(this).css({ background: '#00F', color: 'white' });
         console.log('정답');
       } else {
+        $(this).css({ background: '#F00', color: 'white' });
         console.log('오답');
       }
-    });
+    }); //each
 
     $('.ex8 .result').text(point);
   }); //click
+}); //ready
+
+/* -------------------------9번 */
+
+$(function () {
+  $('.ex9 button').click(function () {
+    var result = '';
+
+    $('.ex9 input:checked').each(function () {
+      result += $(this).val();
+      +',';
+    });
+    $('.ex9 .result').text(result);
+  }); //click
+}); //ready
+
+/* -------------------------10번 */
+//내가 만든것.
+// $(function () {
+//   $('.ex10 button').click(function () {
+//     var point = 0;
+//     var total = 0;
+//     $('.ex10 .q1 input:checked').each(function () {
+//       var userCheck = $(this).val();
+//       if (userCheck === '정답') {
+//         point++;
+//       } else {
+//       }
+//     });
+//     if (point === parseInt($('.ex10 .q1').attr('data-cnt'))) {
+//       console.log('1번 완전정답');
+//       total++;
+//     } else {
+//       console.log('1번 완전오답');
+//     }
+//     var point2 = 0;
+//     $('.ex10 .q2 input:checked').each(function () {
+//       var userCheck = $(this).val();
+//       if (userCheck === '정답') {
+//         point2++;
+//       } else {
+//       }
+//     });
+//     if (point2 === parseInt($('.ex10 .q2').attr('data-cnt'))) {
+//       console.log('2번 완전정답');
+//       total += 1;
+//     } else {
+//       console.log('2번 완전오답');
+//     }
+
+//     if (total === 2) {
+//       $('.ex10 .result').text('정답!');
+//     } else {
+//       $('.ex10 .result').text('오답!');
+//     }
+//     console.log('포인트', point);
+//     console.log('토틸', total);
+//   });
+// });
+
+$(function () {
+  $('.ex10 button').click(function () {
+    var point = 0;
+    $('.ex10 .q').each(function () {
+      var checkcnt = 0;
+
+      $(this)
+        .children('input:checked')
+        .each(function () {
+          if ($(this).val() === '정답') {
+            checkcnt++;
+          } else {
+            checkcnt--;
+          }
+        }); //each
+
+      var totalcnt = parseInt($(this).attr('data-cnt'));
+      if (checkcnt === totalcnt) {
+        point++;
+      }
+    }); //.q each
+
+    $('.ex10 .result').text(point);
+  }); //click
+}); //ready
+
+/* -------------------------11번 */
+
+$(function () {
+  $('.ex11 button').click(function () {
+    $('.ex11 .q').each(function () {
+      var result = '';
+
+      $(this)
+        .children('input:checked')
+        .each(function () {
+          var userCheck = $(this).val();
+          result += userCheck + ',';
+          console.log(result);
+        });
+      $(this).children('.result').text(result);
+    }); //each
+  }); //click
+}); //ready
+
+/* -------------------------12번 */
+
+$(function () {
+  $('.ex12 > div').mouseenter(function () {
+    $(this)
+      .children()
+      .each(function () {
+        var bg = $(this).text();
+        $(this).css({ background: bg });
+      }); //each
+  }); //mouseenter
+
+  $('.ex12 > div').mouseleave(function () {
+    $('.ex12 > div > div').css({ background: 'none' });
+  });
 }); //ready
