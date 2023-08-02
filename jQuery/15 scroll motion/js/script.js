@@ -11,8 +11,7 @@ $(function () {
     $('.ex1').each(function () {
       var offt = $(this).offset().top;
       var ex1h = $(this).height();
-
-      if (scry >= offt - winh * 0.4 + ex1h || scry <= offt - winh * 0.4) {
+      if (scry <= offt - winh * 0.4 || scry >= offt - winh * 0.4 + ex1h) {
         $(this).removeClass('active');
       } else if (scry >= offt - winh * 0.4) {
         $(this).addClass('active');
