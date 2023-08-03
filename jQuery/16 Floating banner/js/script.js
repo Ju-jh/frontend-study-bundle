@@ -4,6 +4,8 @@ $(function () {
     var wscry = $(window).scrollLeft();
     var winh = $(window).height();
     var winw = $(window).width();
+
+    $('div').each(function () {});
     $('.banner1').css({
       top: scry + winh * 0.5 - 100,
       left: wscry + 10,
