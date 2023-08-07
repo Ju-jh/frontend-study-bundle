@@ -20,8 +20,9 @@ $(function () {
 }); //ready
 
 $(function () {
-  var isMotionStart = true;
   var rafId;
+  var isMotionStart = true;
+
   var fnScrollMotion = function () {
     if (!isMotionStart) return; //시작이 불가능이면 정지
     isMotionStart = false; //시작 = 불가능
