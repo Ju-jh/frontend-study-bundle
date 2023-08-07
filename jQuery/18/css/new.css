@@ -1,0 +1,49 @@
+body{
+    overflow-x: hidden;
+}
+
+.line{
+    position: fixed;
+    width: 100%;
+    border: 1px solid black;
+    top: 50%
+}
+
+.ex1 , .ex2, .ex3{
+    width: 1000px;
+    margin: 1000px auto;
+    border: 1px solid black;
+}
+
+.ex1 div, .ex2 div, .ex3 div{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 0 auto;
+}
+
+.ex4{
+    width: 200px;
+    height: 200px;
+    margin: 1000px auto;
+    background: black;
+}
+
+.ex5{
+    width: 200px;
+    height: 200px;
+    margin: 1000px auto;
+    background: yellow;
+    border-radius: 0;
+}
+.ex6{
+    width: 200px;
+    margin: 1000px auto;
+}
+
+.ex6 div{
+    width: 200px;
+    height: 200px;
+    background: pink;
+    margin: 100px 0;
+}

@@ -1,0 +1,12 @@
+.ex3 div,
+.ex4 div,
+.ex5 div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.ex4 div.active {
+  background-color: red;
+}
