@@ -170,21 +170,18 @@ document.querySelectorAll('.ex6 input').forEach((input) => {
   });
 }
 
-//ex11번
+//ex12번
 
 {
   document.querySelectorAll('.ex12 button').forEach((button) => {
     button.addEventListener('click', (e) => {
       document.querySelectorAll('.ex12 button').forEach((button) => {
-        button.classList.remove('active');
-      });
-      e.target.classList.toggle('active');
-      console.log(Array.from(e.target.getElementByClassName)('active'));
-      if (e.target.getElementByClassName('active')) {
-        document.querySelectorAll('.ex12 button').forEach((button) => {
+        if (button.classList.value === 'active') {
           button.classList.remove('active');
-        });
-      }
+        } else {
+          e.target.classList.toggle('active');
+        }
+      });
     });
   });
 }
