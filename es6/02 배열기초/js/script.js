@@ -172,16 +172,33 @@ document.querySelectorAll('.ex6 input').forEach((input) => {
 
 //ex12번
 
+// {
+//   document.querySelectorAll('.ex12 button').forEach((button) => {
+//     button.addEventListener('click', (e) => {
+//       document.querySelectorAll('.ex12 button').forEach((button) => {
+//         if (button.classList.value === 'active') {
+//           button.classList.remove('active'),
+//             e.target.classList.toggle('active');
+//         } else {
+//           e.target.classList.toggle('active');
+//         }
+//       });
+//     });
+//   });
+// }
+
 {
   document.querySelectorAll('.ex12 button').forEach((button) => {
     button.addEventListener('click', (e) => {
-      document.querySelectorAll('.ex12 button').forEach((button) => {
-        if (button.classList.value === 'active') {
-          button.classList.remove('active');
-        } else {
-          e.target.classList.toggle('active');
-        }
+      const isActive = e.target.classList.contains('active');
+
+      document.querySelectorAll('.ex12 button').forEach((btn) => {
+        btn.classList.remove('active');
       });
+
+      if (!isActive) {
+        e.target.classList.add('active');
+      }
     });
   });
 }
