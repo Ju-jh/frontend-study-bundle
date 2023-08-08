@@ -1,0 +1,63 @@
+@use './mixin' as m;
+
+//선택자
+.ex1,
+.ex2 {
+  width: 800px;
+  padding: 10px;
+  border: 1px solid #999;
+  margin: 0 auto;
+  text-align: center;
+
+  > div {
+    //.ex1 div, ex2 div
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+    div {
+      width: 50px;
+      height: 50px;
+      background-color: green;
+      &:hover {
+        background-color: red;
+      }
+      //&는 엠파센드 선택자 모체를 의미
+    }
+  }
+}
+
+//변수와 보간법
+$w: 150px;
+$h: 100;
+.ex3 {
+  width: $w;
+  height: #{$h}px;
+  margin: 0 auto;
+  border: #{11 - 10}px solid red;
+}
+
+.ex4 {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border: 1px solid red;
+  @media #{m.$lg} {
+    background: red;
+  }
+
+  @media #{m.$md} {
+    background: blue;
+  }
+
+  @media #{m.$sm} {
+    background: green;
+  }
+}
+
+/* ======= mixin ======= */
+
+.ex5 button {
+  @include m.btn(blue);
+}

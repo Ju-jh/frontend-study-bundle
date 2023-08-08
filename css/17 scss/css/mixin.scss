@@ -1,0 +1,14 @@
+$lg: 'screen and ( min-width : 1000px )';
+$md: 'screen and ( min-width : 500px ) and ( max-width : 1000px )';
+$sm: 'screen and ( max-width : 500px )';
+
+@mixin btn($bg) {
+  background: none;
+  border: none;
+  padding: 10px 30px;
+  background: black;
+  color: #fff;
+  &:hover {
+    background: $bg;
+  }
+}

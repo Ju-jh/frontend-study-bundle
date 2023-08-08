@@ -10,3 +10,8 @@
 .ex4 div.active {
   background-color: red;
 }
+
+.ex12 button.active{
+  color: red;
+  background: red;
+}

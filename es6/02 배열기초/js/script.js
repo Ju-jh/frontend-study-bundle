@@ -92,3 +92,99 @@ document.querySelectorAll('.ex6 input').forEach((input) => {
     document.querySelector('.ex6 .result').innerHTML = answer;
   });
 }
+
+//ex7번
+
+{
+  // document.getElementById('id1') === document.querySelector('#id1');
+  document.getElementById('id1').style.background = 'red';
+  Array.from(document.getElementsByTagName('a')).forEach((e) => {
+    // 짝퉁배열(유사배열(HTMLCollection))을 실제 배열로 바꾸는 명령어 --> Array.from()
+    e.style.textDecoration = 'none';
+  });
+
+  Array.from(document.getElementsByClassName('a')).forEach((el) => {
+    el.style.color = 'red';
+  });
+}
+
+//ex8번
+
+{
+  answer = '';
+  document.querySelector('.ex8 button').addEventListener('click', (e) => {
+    document.querySelectorAll('.ex8 .category').forEach((category) => {
+      answer = '';
+      category.querySelectorAll('input:checked').forEach((checkedInput) => {
+        answer += checkedInput.value;
+      }); //input:checked forEach
+      category.querySelector('.ex8 .result').innerHTML = answer;
+    }); //category forEach
+  }); //click
+}
+
+//ex9번
+
+{
+  document.querySelectorAll('.ex9 input').forEach((input) => {
+    input.readOnly = true;
+    input.value = Math.floor(Math.random() * 10);
+  });
+
+  document.querySelector('.ex9 button').addEventListener('click', (e) => {
+    document.querySelectorAll('.ex9 .numbers').forEach((numbers) => {
+      let sum = 0;
+
+      numbers.querySelectorAll('input').forEach((input) => {
+        sum += parseInt(input.value);
+      });
+      numbers.querySelector('p').innerText = sum;
+    });
+  });
+}
+
+//ex10번
+
+{
+  document.querySelectorAll('.ex10 button').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      Array.from(e.target.parentElement.children).forEach((button) => {
+        button.style.color = 'black';
+      });
+      e.target.style.color = 'red';
+    });
+  });
+}
+
+//ex11번
+
+{
+  document.querySelectorAll('.ex11 input').forEach((input) => {
+    input.addEventListener('input', (e) => {
+      let str = e.target.value;
+      let digit = parseInt(e.target.getAttribute('data-digit'));
+      if (str.length >= digit && e.target.nextElementSibling) {
+        e.target.nextElementSibling.focus();
+      }
+    });
+  });
+}
+
+//ex11번
+
+{
+  document.querySelectorAll('.ex12 button').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      document.querySelectorAll('.ex12 button').forEach((button) => {
+        button.classList.remove('active');
+      });
+      e.target.classList.toggle('active');
+      console.log(Array.from(e.target.getElementByClassName)('active'));
+      if (e.target.getElementByClassName('active')) {
+        document.querySelectorAll('.ex12 button').forEach((button) => {
+          button.classList.remove('active');
+        });
+      }
+    });
+  });
+}

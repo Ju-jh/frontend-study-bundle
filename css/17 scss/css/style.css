@@ -1,0 +1,66 @@
+.ex1,
+.ex2 {
+  width: 800px;
+  padding: 10px;
+  border: 1px solid #999;
+  margin: 0 auto;
+  text-align: center;
+}
+.ex1 > div,
+.ex2 > div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.ex1 > div div,
+.ex2 > div div {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}
+.ex1 > div div:hover,
+.ex2 > div div:hover {
+  background-color: red;
+}
+
+.ex3 {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.ex4 {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border: 1px solid red;
+}
+@media screen and ( min-width : 1000px ) {
+  .ex4 {
+    background: red;
+  }
+}
+@media screen and ( min-width : 500px ) and ( max-width : 1000px ) {
+  .ex4 {
+    background: blue;
+  }
+}
+@media screen and ( max-width : 500px ) {
+  .ex4 {
+    background: green;
+  }
+}
+
+/* ======= mixin ======= */
+.ex5 button {
+  background: none;
+  border: none;
+  padding: 10px 30px;
+  background: black;
+  color: #fff;
+}
+.ex5 button:hover {
+  background: blue;
+}/*# sourceMappingURL=style.css.map */
