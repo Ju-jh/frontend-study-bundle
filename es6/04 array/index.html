@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        동일한 값으로 구성된 배열 두개더라도 서로 다른 배열이다(Imutable)
+        <pre>
+          //a와 b는 다른 배열이다
+          let a=[1,2,3]
+          let b=[1,2,3]
+        </pre>
+      </li>
+      <li>
+        배열은 참조형이다
+        <pre>
+          //a와 b는 같은배열
+          let a = [1,2,3]
+          let b = a
+        </pre>
+      </li>
+      <li>
+        배열 선언방법
+        <pre>
+          let a = []
+          let a = new Array(3)
+        </pre>
+      </li>
+      <li>
+        배열의 인덱스는 0부터 시작, 갯수 -1 으로 끝
+        <pre>
+          //let arr = [1,2,3]
+          arr[0] = 1
+          arr[2] = 3
+        </pre>
+      </li>
+      <li>
+        배열의 값을 추가, 제거
+        <pre>
+          arr.push() //배열 뒤 추가 
+          arr.unshift() // 배열 앞 추가
+          arr.pop() // 배열 뒤 제거
+          arr.shift() // 배열 앞 제거
+        </pre>
+      </li>
+      <li>
+        splice(배열의 값을 추가, 제거 혹은 변경)
+        <pre>
+          arr = [1,2,3]
+          arr.splice(1,2) //1번쨰부터 2개 지움
+          => arr = [1]
+          arr.splice(2,1,4) //2번쨰부터 1개를 지우고 4 추가
+           => arr = [1,2,4]
+        </pre>
+      </li>
+      <li>
+        split , 글자를 이용해 배열생성 <== 글자를 쪼개서 배열로 만든다.
+        <pre>
+          let str = 123456
+          let arr = str.split('')
+          arr = [1,2,3,4,5,6]
+        </pre>
+      </li>
+      <li>
+        slice, 배열과 문자열의 특정 범위를 반환(return)한다.
+        <pre>
+          let arr = ['가', '나', '다', '라', '마'];
+          let arr2 = arr.slice(1, 3);//arr배열의 1번째부터 2번까지 반환
+          console.log(arr2); // [가,나,다]
+          let str = '가나다라마바사';
+          let str2 = str.slice(0, -2);//문자의 0번쩨부터 뒤에서 3번전째까지 반환
+          console.log(str2);가나다라마
+        </pre>
+      </li>
+      <li>
+        join, 배열안의 값들을 문자형으로 반환
+        <pre>
+            let arr = ['가', '나', '다'];
+            let str = arr.join(); 
+            console.log(str)//가,나,다
+            let str2 = arr.join(''); 
+            console.log(str2)//가나다
+            let str3 = arr.join('-');
+            console.log(str3)//가-나-다
+        </pre>
+      </li>
+      <li>
+        indexOf, 배열의 값과 일치하는 첫번째 인덱스를 반환
+      </li>
+      <pre>
+            let arr = ['가', '나', '다', '가', '나', '다'];
+            let idx = arr.indexOf('나');
+            console.log(idx); //1
+            idx = arr.indexOf('라');
+            console.log(idx); //-1 <--없다는 뜻
+      </pre>
+    </ul>
+
+    <div class="ex2">
+      <p>2.밥사는 요일 뽑기</p>
+      <p>
+        <button>버튼</button>
+      </p>
+      <ul class="result"></ul>
+    </div>
+    <hr />
+    <div class="ex3">
+      <p>3. 점수계산</p>
+      <div>
+        <p>3-1. two에 해당하는 숫자를 입력하세요</p>
+        <p><input type="number" /></p>
+      </div>
+      <div>
+        <p>3-2. five에 해당하는 숫자를 입력하세요</p>
+        <p><input type="number" /></p>
+      </div>
+      <div>
+        <p>3-3. one에 해당하는 숫자를 입력하세요</p>
+        <p><input type="number" /></p>
+      </div>
+      <p><button>결과</button></p>
+      <p class="result"></p>
+    </div>
+    <hr />
+    <div class="ex4">
+      <p>4.명단을 추가하고 출력버튼을 누르면 모든명단이 li로 출력됨</p>
+      <p>
+        <input type="text" />
+        <button class="add">명단추가</button>
+      </p>
+      <p><button class="print">명단출력</button></p>
+      <ul class="result"></ul>
+    </div>
+    <hr>
+    <div class="ex5">
+      <p>5. 제시된 영단어에 해당하는 요일을 한글로 입력하세요</p>
+      <p><input class="q" type="text" readonly></p>
+      <p><input class="a" type="text" placeholder="예시:토"></p>
+      <p><button>결과확인</button></p>
+      <p><div class="result"></div></p>
+    </div>
+    <hr>
+    <div class="ex6">
+      <p>6. 제시된 영단어에 해당하는 요일을 한글로 입력하세요</p>
+      <p><input class="q" type="text" readonly></p>
+      <p><input class="a" type="text" placeholder="예시:토"></p>
+      <p><button>결과확인</button></p>
+      <p>
+      <div class="result"></div>
+      </p>
+    </div>
+    <hr>
+    <div class="ex7">
+      <p>7. 요일을 한글로 입력하면 영어로 출력되요(쉼표로 구분, 띄어쓰기 금지)</p>
+      <p><input class="a" type="text" placeholder="예시:월,화"></p>
+      <p><button>번역하기</button></p>
+      <p>
+      <div class="result"></div>
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="ex8">
+      <p>8. 제시된 요일을 한글로 입력하세요</p>
+      <p>
+        <input class="q" type="text" style="width: 300px" readonly>
+      </p>
+      <p>
+        <input class="a" type="text"  style="width: 300px" placeholder="띄어쓰기 없이 쉼표로 구분해주세요">
+      </p>
+      <p>
+        <button>결과보기</button>
+      </p>
+      <p class="result">결과</p>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>
