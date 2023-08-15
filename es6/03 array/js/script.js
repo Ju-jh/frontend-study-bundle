@@ -130,23 +130,22 @@
 /* ex8 */
 
 {
+  // 문제 내는것.
   let enStr = 'sun,mon,tur,wed,thr,fry,sat';
-
   let koStr = '일,월,화,수,목,금,토';
   let enArr = enStr.split(',');
   let koArr = koStr.split(',');
   let enArrCopy = [...enArr]; //spread함수 spread operator 전개 연산자 (배열은 함부러 지울 수 없다. 그래서 구조분에 할당을 통하여 복사를 해준다.)
   let qStr = '';
-  for (let i = 1; i <= 3; i++) {
+  let n = Math.ceil(Math.random() * 5);
+  for (let i = 1; i <= n; i++) {
     let ranN = Math.floor(Math.random() * enArrCopy.length); //2
     let day = enArrCopy[ranN];
     enArrCopy.splice(ranN, 1); //[sun,mon,wed,thr,fry,sat]
-    qStr += i < 3 ? day + ',' : day;
+    qStr += i < n ? day + ',' : day;
   }
-  console.log();
   document.querySelector('.ex8 .q').value = qStr;
   let qStrArr = qStr.split(',');
-  // 문제 내는것.
 
   // 문제 맞춰보기
   document.querySelector('.ex8 button').addEventListener('click', (e) => {
@@ -155,23 +154,117 @@
     koDay = document.querySelector('.ex8 .a').value;
     koDayArr = koDay.split(',');
     let ansNum = 0;
-    for (let i = 0; i <= 2; i++) {
+    for (let i = 0; i <= n - 1; i++) {
       let k = koArrCopy.indexOf(koDayArr[i]);
-      console.log('koDayArr', koDayArr);
-      console.log('koDayArr의 해당 순서', koDayArr[i]);
-      console.log('k 인덱스오브한거', k);
       let q = enArrCopy.indexOf(qStrArr[i]);
-      console.log('qqqq', q);
       if (k === q) {
         ansNum += 1;
       } else {
       }
     }
-    console.log(ansNum);
-    if (ansNum === 3) {
+    if (ansNum === n) {
+      ansNum = 0;
+
       document.querySelector('.ex8 .result').innerHTML = '정답입니다.';
+
+      setTimeout(function () {
+        alert('정답입니다. 새로운 문제를 제시합니다.'); //알러트
+        location.reload(); // 페이지 새로고침
+        document.querySelector('.ex8 .a').value = '';
+        document.querySelector('.ex8 .a').focus();
+      }, 1000); // 1초 후 실행
     } else {
+      ansNum = 0;
+      document.querySelector('.ex8 .a').value = '';
+      document.querySelector('.ex8 .a').focus();
       document.querySelector('.ex8 .result').innerHTML = '오답입니다.';
     }
+  });
+}
+
+/* ex9 */
+
+{
+  // 문제 내는것.
+  let enStr = 'sun,mon,tur,wed,thr,fry,sat';
+  let koStr = '일,월,화,수,목,금,토';
+  let enArr = enStr.split(',');
+  let koArr = koStr.split(',');
+  let enArrCopy = [...enArr]; //spread함수 spread operator 전개 연산자 (배열은 함부러 지울 수 없다. 그래서 구조분에 할당을 통하여 복사를 해준다.)
+  let qStr = '';
+  let n = Math.ceil(Math.random() * 5);
+  for (let i = 1; i <= n; i++) {
+    let ranN = Math.floor(Math.random() * enArrCopy.length); //2
+    let day = enArrCopy[ranN];
+    enArrCopy.splice(ranN, 1); //[sun,mon,wed,thr,fry,sat]
+    qStr += i < n ? day + ',' : day;
+  }
+  document.querySelector('.ex9 .q').value = qStr;
+
+  document.querySelector('.ex9 button').addEventListener('click', (e) => {
+    let point = 0;
+    let qArr = document.querySelector('.ex9 .q').value.split(',');
+    let aArr = document.querySelector('.ex9 .a').value.split(',');
+    for (let i = 0; i < qArr.length; i++) {
+      if (enArr.indexOf(qArr[i]) === koArr.indexOf(aArr[i])) {
+        point++;
+      }
+    } //for문
+
+    let result = point === qArr.length ? '정답' : '오답';
+    document.querySelector('.ex9 .result').innerText = result;
+  });
+}
+
+/* ex10 */
+
+{
+  let alphabetArr = 'abcdefefghijklmnopqrstuvwxyz'.split('');
+  let numberArr = [];
+
+  alphabetArr.forEach((v, i) => {
+    numberArr.push(i);
+  });
+
+  document.querySelector('form.ex10').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let spellArr = document
+      .querySelector('form.ex10 input')
+      .value.toLowerCase()
+      .split('');
+    document.querySelector('form.ex10 .result').innerText = '';
+    spellArr.forEach((v, i) => {
+      spellIdx = alphabetArr.indexOf(v);
+      let str =
+        i < spellArr.length - 1
+          ? numberArr[spellIdx] + ','
+          : numberArr[spellIdx];
+      document.querySelector('form.ex10 .result').innerText += str;
+    }); //forEach
+  }); //submit
+}
+
+/* ex11 */
+
+{
+  let alphabetArr = 'abcdefefghijklmnopqrstuvwxyz'.split('');
+  let numberArr = [];
+
+  alphabetArr.forEach((v, i) => {
+    numberArr.push(i);
+  });
+
+  document.querySelector('form.ex11').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let password = document.querySelector('form.ex11 input').value.split(',');
+    document.querySelector('form.ex11 .result').innerText = '';
+    password.forEach((v, i) => {
+      numIdx = numberArr.indexOf(parseInt(v));
+      let str =
+        i < password.length - 1
+          ? alphabetArr[numIdx] + ','
+          : alphabetArr[numIdx];
+      document.querySelector('form.ex11 .result').innerText += str;
+    });
   });
 }

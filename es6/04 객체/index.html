@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script1.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>object (객체)</h1>
+    <ul>
+      <li>가독성, 관리, 호환성(범용성)</li>
+      <li>
+        객체의 생성과 키값에 접근<br>
+        키의 형태는 문자열과 숫자도 허락
+        <pre>
+          {
+          let person = {
+          //객체의 생성
+          이름: '홍길동',
+          성별: '남',
+          나이: 23,
+          };
+          
+          let name = person.이름; //person객체의 이름 키값을 호출
+          console.log(name); //홍길동
+          person.이름 = '아무개'; //person객체의 이름 키값을 변경
+          name = person.이름;
+          console.log(name); //아무개
+          }
+        </pre>
+      </li>
+      <li>
+        대괄호를 사용하여 키값찾기
+        <pre>
+          {
+          let person = {
+          //객체의 생성
+          '이름-1': '일기웅',
+          '이름-2': '이기웅',
+          '이름-3': '삼기웅',
+          };
+          
+          // let name = person.이름 - 3;
+          //문자열로된 키의 값을 가져오지 못한다.
+          let name = person['이름-3']; //대괄호로 싸줘야 키를 찾을 수 있다.
+          console.log(name);
+          }
+        </pre>
+      </li>
+      <li>
+        객체의 computed 방식의 키 호출 예시
+        <pre>
+          {
+          let obj = {
+          1: 'one',
+          one: 1,
+          n: 'n의값입니다',
+          };
+          
+          console.log('obj.one', obj.one); //1
+          console.log('obj.1', obj[1]); //one
+          let n = 1;
+          console.log('obj.n', obj[n]); // === obj[1] === one
+          console.log('obj.n', obj['n']); // n의값입니다
+          }
+
+        </pre>
+      </li>
+      <li>
+        객체의 키를 문자열이 아닌 템플릿 리터럴(``)로는 찾을 수 없다
+      </li>
+    </ul>
+    <hr>
+    <form class="ex1">
+      <p>1. 알파벳을 입력 후 버튼을 누르면 알파벳 별 글자수가 출력되요</p>
+      <p><input type="text"></p>
+    </form>
+  </body>
+</html>
