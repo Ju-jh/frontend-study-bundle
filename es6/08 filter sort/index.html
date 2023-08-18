@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="ex1">
+      <p>1. 1~10으로 구성된 배열중에 짝홀수 출력하기</p>
+      <p>
+        <button class="even">짝수</button>
+        <button class="odd">홀수</button>
+      </p>
+      <p class="result"></p>
+    </div>
+
+    <hr>
+
+    <div class="ex2">
+      <p>2. 숫자를 입력한 후  정렬하세요</p>
+      <p><input type="text" placeholder="여백없이 심표로 구분입력"></p>
+      <p>
+        <button class="asc">오름차순</button>
+        <button class="desc">내림차순</button>
+      </p>
+      <p class="result"></p>
+    </div>
+
+    <hr>
+
+    <div class="ex3">
+      <p>3. 숫자나 글자를 입력한 후 정렬하세요</p>
+      <p><input type="text" placeholder="여백없이 입력"></p>
+      <p>
+        <button class="asc">오름차순</button>
+        <button class="desc">내림차순</button>
+      </p>
+      <p class="result"></p>
+    </div>
+
+    <hr>
+    
+    <form class="ex4">
+      <p>4. 이름과 나이를 입력 후 명단에 추가하세요</p>
+      <p>이름 : <input type="text"></p>
+      <p>나이 : <input type="number"></p>
+      <p>
+        성별 : 
+        <input required value="남" type="radio" name="ex4"> 남
+        <input required value="여" type="radio" name="ex4"> 여
+      </p>
+
+      <p>
+        <button class="add">추가하기</button>
+        <button class="name" type="button">이름순 정렬</button>
+        <button class="age" type="button">나이순 정렬</button>
+        <button class="man" type="button">남자 명단</button>
+        <button class="woman" type="button">여자 명단</button>
+      </p>
+
+      <ul class="result">
+      </ul>
+    </form>
+
+  </body>
+</html>
