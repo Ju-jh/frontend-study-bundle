@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>localStorage</h1>
+    <ul>
+      <li>데이터를 하드디스크에 저장한다.</li>
+      <li>보안이 필요한 정보등은 사용해서는 안됨</li>
+        사용법
+        <pre>
+          {
+          localStorage.setItem('a', 1); // a = 1 을 로컬스토리지에 저장한다.
+          localStorage.getItem('a'); // a 를 로컬스토리지에서 호출한다.
+          localStorage.removeItem('a'); // 로컬스토리지에서 a 를 제거한다.
+          }
+        </pre>
+    </ul>
+
+    <hr>
+
+    <form class="ex1">
+      <p>1. 이름을 입력하시면 명단에 추가되요</p>
+      <p><input type="text"></p>
+      <p class="result"></p>
+    </form>
+
+    <hr>
+
+    <div class="ex2">
+      <p>2. todoApp</p>
+      <form action="">
+        <p>일정명 : <input class="title" type="text"></p>
+        <p>일자 : <input class="date" type="date"></p>
+        <p>시간 : <input class="time" type="time"></p>
+        <button>추가하기</button>
+      </form>
+      <hr>
+      <p>검색 : <input class="search" type="text"></p>
+      <p>
+        정렬 : 
+        <select name="" id="">
+          <option value="latest">최신등록순</option>
+          <option value="reverse">등록순</option>
+          <option value="title">일정명</option>
+          <option value="date">시간순</option>
+        </select>
+      </p>
+      <hr>
+      <p class="result"></p>
+    </div>
+
+
+    <hr>
+
+    <div class="ex3" style="display: none;">
+      <p>3. 팝업창 구현하기</p>
+      <p>
+        <input type="checkbox"> 오늘 하루 이 창 열지 않기
+      </p>
+      <p>
+        <button>버튼</button>
+      </p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>
