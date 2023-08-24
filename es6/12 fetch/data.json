@@ -1,0 +1,19 @@
+{
+    "membersArr":[
+        {
+            "name":"홍길동",
+            "age":"24",
+            "gender":"남"
+        },
+        {
+            "name":"홍",
+            "age":"24",
+            "gender":"녀"
+        },
+        {
+            "name":"홍길",
+            "age":"24",
+            "gender":"남"
+        }
+    ]
+}

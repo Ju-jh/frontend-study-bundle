@@ -43,7 +43,7 @@
   });
 }
 
-/* ========== ex1 ======== async await == */
+/* ========== ex2 ======== async await == */
 
 {
   const 회원아이디받아오기 = () => {
@@ -71,10 +71,13 @@
   //function 안에서 async를 앞에 붙여야한다.
   document.querySelector('.ex2 button').addEventListener('click', async (e) => {
     console.log('로그인 입력 데이터 전송');
+
     //회원 아이디 받아오기
     let id = await 회원아이디받아오기();
+
     //아이디에 해당하는 회원정보 받아오기
     let member = await 회원정보받아오기(id);
+
     //출력
     회원정보출력(member);
   });
