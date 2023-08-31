@@ -1,0 +1,63 @@
+svg {
+  display: block;
+  width: min(60%, 500px);
+  height: 300px;
+  margin: 50px auto;
+  background: #eee;
+
+  &.svg1 rect {
+    width: 200px;
+    height: 200px;
+    x: 50px;
+    y: 50px;
+    fill: red;
+    stroke: aqua;
+    stroke-width: 10px;
+    stroke-dasharray: 10px;
+    animation: dash-move 300s linear infinite;
+  }
+
+  &.svg2 rect {
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transition: stroke-dashoffset 1s;
+  }
+
+  &.svg2:hover rect {
+    stroke-dashoffset: 0;
+  }
+
+  &.svg3 {
+    .circle1 {
+      cx: 150px;
+      cy: 150px;
+      r: 100px;
+      fill: none;
+      stroke: #ddd;
+      stroke-width: 20px;
+    }
+    .circle2 {
+      transform-origin: center center;
+      transform: rotate(-90deg);
+      cx: 150px;
+      cy: 150px;
+      r: 100px;
+      fill: none;
+      stroke: blue;
+      stroke-width: 20px;
+      stroke-dasharray: 100px;
+      // stroke-dashoffset: clac(100px - 80px);
+      stroke-dashoffset: 100px;
+      transition: stroke-dashoffset 1s;
+    }
+  }
+
+  @keyframes dash-move {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 10000px;
+    }
+  }
+}
